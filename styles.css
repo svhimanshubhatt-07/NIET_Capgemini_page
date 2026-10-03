@@ -584,199 +584,99 @@ button {
 }
 
 /* --------------------------------------------------------------------------
-   UNIQUE ANIMATED SLIDING TICKER BAR
+   STATIC HERO STATUS BAR (FIXED, NO SLIDE - MATCHING REFERENCE IMAGE)
    -------------------------------------------------------------------------- */
 .hero-status-strip {
-  background: #080F1E;
-  border-top: 1px solid rgba(0, 110, 185, 0.25);
-  border-bottom: 1px solid rgba(0, 110, 185, 0.25);
-  height: 52px;
+  background: #FFFFFF;
+  border-top: 1px solid #ECEFF2;
+  border-bottom: 1px solid #ECEFF2;
+  padding: 10px 0;
   position: relative;
   z-index: 10;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.02);
+}
+
+.hero-status-container {
   display: flex;
   align-items: center;
-  overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
 }
 
-/* Top Neon Animated Laser Line */
-.hero-status-strip::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, #D71920, #00C2DE, #006EB9, #D71920);
-  background-size: 300% 100%;
-  animation: laser-shift 8s linear infinite;
-  z-index: 5;
-}
-
-@keyframes laser-shift {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 300% 50%;
-  }
-}
-
-/* Left Fixed Live Badge */
-.ticker-badge-prefix {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 0 20px 0 24px;
-  height: 100%;
-  background: #080F1E;
-  border-right: 1px solid rgba(255, 255, 255, 0.12);
-  z-index: 4;
-  flex-shrink: 0;
-}
-
-.ticker-beacon {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background-color: var(--niet-red);
-  box-shadow: 0 0 10px var(--niet-red);
-  animation: beacon-pulse 1.8s infinite ease-out;
-}
-
-@keyframes beacon-pulse {
-  0% {
-    transform: scale(0.9);
-    box-shadow: 0 0 0 0 rgba(215, 25, 32, 0.7);
-  }
-  70% {
-    transform: scale(1.1);
-    box-shadow: 0 0 0 8px rgba(215, 25, 32, 0);
-  }
-  100% {
-    transform: scale(0.9);
-    box-shadow: 0 0 0 0 rgba(215, 25, 32, 0);
-  }
-}
-
-.ticker-badge-text {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 11.5px;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  color: #FFFFFF;
-}
-
-/* Viewport with Smooth Edge Gradient Masks */
-.ticker-viewport {
-  flex: 1;
-  overflow: hidden;
-  position: relative;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  mask-image: linear-gradient(90deg, transparent 0%, black 40px, black calc(100% - 40px), transparent 100%);
-  -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 40px, black calc(100% - 40px), transparent 100%);
-}
-
-/* Continuous Sliding Ticker Track */
-.ticker-track {
-  display: flex;
-  width: max-content;
-  align-items: center;
-  animation: ticker-slide 32s linear infinite;
-  will-change: transform;
-}
-
-.hero-status-strip:hover .ticker-track {
-  animation-play-state: paused;
-}
-
-@keyframes ticker-slide {
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
-  100% {
-    transform: translate3d(-50%, 0, 0);
-  }
-}
-
-.ticker-group {
+.hero-status-items {
   display: flex;
   align-items: center;
   gap: 24px;
-  padding-right: 24px;
-  white-space: nowrap;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.ticker-item {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 13px;
-  color: #CBD5E1;
-  user-select: none;
-}
-
-.ticker-icon {
-  font-size: 14px;
-  display: inline-block;
-  line-height: 1;
-}
-
-.ticker-label {
-  color: #94A3B8;
-  font-size: 12.5px;
-  font-weight: 500;
-}
-
-.ticker-val {
-  color: #FFFFFF;
-  font-weight: 700;
-  font-size: 13px;
-}
-
-strong.ticker-val {
-  color: #67E8F9;
-  font-weight: 800;
-  text-shadow: 0 0 12px rgba(103, 232, 249, 0.4);
-}
-
-.ticker-sep {
-  color: var(--cyan);
-  opacity: 0.5;
-  font-size: 10px;
-  user-select: none;
-}
-
-/* Right Quick Action Link */
-.ticker-action-link {
+.status-item {
   display: inline-flex;
   align-items: center;
   gap: 6px;
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 12.5px;
-  font-weight: 700;
-  color: #FFFFFF;
-  background: rgba(0, 110, 185, 0.35);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  padding: 6px 16px;
-  margin: 0 16px;
-  border-radius: var(--radius-full);
-  border: 1px solid rgba(0, 194, 222, 0.4);
-  box-shadow: 0 0 14px rgba(0, 110, 185, 0.25);
-  transition: all var(--transition-fast);
-  flex-shrink: 0;
-  z-index: 4;
+  font-size: 13px;
+  user-select: none;
 }
 
-.ticker-action-link:hover {
-  background: var(--capgemini-blue);
-  border-color: #67E8F9;
+.status-item.highlight-launch .status-label,
+.status-item.highlight-launch .status-val {
+  color: #006EB9;
+  font-weight: 700;
+}
+
+.status-label {
+  color: #64748B;
+  font-size: 12.5px;
+  font-weight: 500;
+}
+
+.status-val {
+  color: #0F172A;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.status-sep {
+  color: #CBD5E1;
+  font-size: 16px;
+  line-height: 1;
+  user-select: none;
+}
+
+/* Right Quick Action Link (Explore Details) */
+.status-action-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #D71920;
+  background: #FFFFFF;
+  padding: 5px 14px;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(215, 25, 32, 0.32);
+  box-shadow: 0 1px 3px rgba(215, 25, 32, 0.08);
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.status-action-link:hover {
+  background: #FFF1F2;
+  border-color: #D71920;
+  color: #B91C1C;
   transform: translateY(-1px);
-  box-shadow: 0 4px 16px rgba(0, 110, 185, 0.5), 0 0 14px rgba(0, 194, 222, 0.4);
+  box-shadow: 0 3px 8px rgba(215, 25, 32, 0.15);
+}
+
+.status-action-link svg {
+  color: #D71920;
+  stroke: #D71920;
 }
 
 .scroll-icon-bounce {
@@ -784,30 +684,26 @@ strong.ticker-val {
 }
 
 @media (max-width: 768px) {
-  .ticker-badge-prefix {
-    padding: 0 12px 0 14px;
+  .hero-status-container {
+    gap: 12px;
   }
 
-  .ticker-badge-text {
-    display: none;
+  .hero-status-items {
+    gap: 12px;
   }
 
-  .ticker-action-link {
-    margin: 0 10px;
-    padding: 5px 12px;
+  .status-item {
+    font-size: 12px;
+  }
+
+  .status-label,
+  .status-val {
+    font-size: 12px;
+  }
+
+  .status-action-link {
+    padding: 4px 12px;
     font-size: 11.5px;
-  }
-}
-
-@keyframes bounce-subtle {
-
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(4px);
   }
 }
 
@@ -2226,9 +2122,6 @@ strong.ticker-val {
 
 
 
-  .hero-status-strip .status-item:nth-child(n+3) {
-    display: none;
-  }
 
   .metric-ribbon {
     grid-template-columns: 1fr;
