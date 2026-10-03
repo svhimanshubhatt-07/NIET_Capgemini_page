@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 48" fill="none" role="img" aria-label="CodeXperience Center">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@800&amp;display=swap');
+      .codex-deep { font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 32px; fill: #006EB9; }
+      .codex-cyan { font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 32px; fill: #00A3E0; }
+      .codex-bracket { stroke: #00A3E0; stroke-width: 4.8; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+    </style>
+  </defs>
+  
+  <!-- "Code" text -->
+  <text x="0" y="34" class="codex-deep">Code</text>
+  
+  <!-- Stylized >< chevrons -->
+  <g transform="translate(86, 10)">
+    <!-- Left Chevron > -->
+    <path class="codex-bracket" d="M 2, 4 L 13, 14 L 2, 24" />
+    <!-- Right Chevron < -->
+    <path class="codex-bracket" d="M 25, 4 L 14, 14 L 25, 24" />
+  </g>
+  
+  <!-- "perience" text -->
+  <text x="119" y="34" class="codex-deep">perience</text>
+  
+  <!-- "Center" text -->
+  <text x="238" y="34" class="codex-cyan">Center</text>
+</svg>
