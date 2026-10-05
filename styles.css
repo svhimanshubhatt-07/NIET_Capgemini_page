@@ -1549,14 +1549,14 @@ button {
 
 
 /* --------------------------------------------------------------------------
-   12. OFFICIAL LAUNCH DATE ANNOUNCEMENT SECTION (30-SEP-2026)
+   12. OFFICIAL LAUNCH EVENT HIGHLIGHTS SECTION
    -------------------------------------------------------------------------- */
 .launch-section {
   background-color: var(--off-white);
   border-bottom: 1px solid var(--border);
   position: relative;
   overflow: hidden;
-  padding: clamp(60px, 8vw, 96px) 0;
+  padding: clamp(40px, 5.5vw, 64px) 0;
 }
 
 .launch-ambient-glow {
@@ -1573,15 +1573,15 @@ button {
   border: 1px solid #E2E8F0;
   border-radius: var(--radius-xl);
   box-shadow: 0 20px 45px -10px rgba(0, 110, 185, 0.09), 0 4px 16px -2px rgba(15, 23, 42, 0.04);
-  padding: clamp(28px, 4.5vw, 48px);
+  padding: clamp(24px, 3.5vw, 36px);
   position: relative;
   overflow: hidden;
   transition: all var(--transition-spring);
 }
 
 .launch-master-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 26px 54px -10px rgba(0, 110, 185, 0.14), 0 8px 24px -2px rgba(15, 23, 42, 0.06);
+  transform: translateY(-3px);
+  box-shadow: 0 24px 50px -10px rgba(0, 110, 185, 0.13), 0 8px 24px -2px rgba(15, 23, 42, 0.05);
   border-color: #CBD5E1;
 }
 
@@ -1595,185 +1595,6 @@ button {
   pointer-events: none;
 }
 
-/* Top Header Row */
-.launch-card-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: clamp(24px, 4vw, 48px);
-}
-
-.launch-date-hero {
-  display: flex;
-  align-items: center;
-  gap: clamp(18px, 3vw, 28px);
-  flex: 1;
-}
-
-.date-badge-box {
-  background: linear-gradient(145deg, #00548E 0%, #006EB9 100%);
-  border-radius: var(--radius-lg);
-  padding: 16px 22px;
-  color: var(--white);
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 10px 24px rgba(0, 110, 185, 0.28);
-  flex-shrink: 0;
-  min-width: 104px;
-}
-
-.badge-month {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 11.5px;
-  font-weight: 800;
-  letter-spacing: 0.14em;
-  color: var(--cyan);
-  text-transform: uppercase;
-}
-
-.badge-number {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: clamp(38px, 4.5vw, 54px);
-  font-weight: 900;
-  line-height: 1;
-  color: var(--white);
-  margin: 3px 0;
-}
-
-.badge-year {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 13px;
-  font-weight: 700;
-  color: rgba(255, 255, 255, 0.88);
-  letter-spacing: 0.06em;
-}
-
-.launch-eyebrow {
-  display: inline-block;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 11.5px;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  color: var(--niet-red);
-  text-transform: uppercase;
-  margin-bottom: 6px;
-}
-
-.launch-main-title {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: clamp(24px, 3vw, 36px);
-  font-weight: 800;
-  color: var(--navy-900);
-  letter-spacing: -0.03em;
-  line-height: 1.18;
-  margin-bottom: 8px;
-}
-
-.launch-main-subtitle {
-  font-size: clamp(14px, 1.6vw, 15.5px);
-  color: var(--text-secondary);
-  line-height: 1.55;
-  max-width: 480px;
-  margin: 0;
-}
-
-/* Countdown Widget */
-.launch-countdown-widget {
-  background: var(--off-white);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 18px 24px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  box-shadow: var(--shadow-sm);
-  flex-shrink: 0;
-}
-
-.countdown-widget-title {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 10.5px;
-  font-weight: 800;
-  letter-spacing: 0.14em;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  margin-bottom: 12px;
-}
-
-.countdown-timer-pills {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.timer-pill {
-  background: var(--white);
-  border: 1px solid #CBD5E1;
-  border-radius: var(--radius-md);
-  padding: 10px 14px;
-  text-align: center;
-  min-width: 60px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
-  transition: all var(--transition-fast);
-}
-
-.timer-pill:hover {
-  border-color: var(--capgemini-blue);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 14px rgba(0, 110, 185, 0.12);
-}
-
-.timer-val {
-  display: block;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: clamp(20px, 2.5vw, 26px);
-  font-weight: 800;
-  line-height: 1;
-  color: var(--navy-900);
-  margin-bottom: 3px;
-  font-variant-numeric: tabular-nums;
-}
-
-.timer-lbl {
-  font-size: 9px;
-  font-weight: 800;
-  letter-spacing: 0.1em;
-  color: var(--text-muted);
-}
-
-.timer-sep {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 20px;
-  font-weight: 800;
-  color: var(--capgemini-blue);
-  line-height: 1;
-  opacity: 0.6;
-  animation: timer-sep-pulse 1s infinite;
-}
-
-@keyframes timer-sep-pulse {
-
-  0%,
-  100% {
-    opacity: 0.6;
-  }
-
-  50% {
-    opacity: 0.2;
-  }
-}
-
-/* Card Middle Divider */
-.launch-card-divider {
-  height: 1px;
-  background: linear-gradient(90deg, transparent 0%, var(--border) 15%, var(--border) 85%, transparent 100%);
-  margin: clamp(24px, 3.5vw, 36px) 0;
-}
-
 /* 3-Column Event Highlights */
 .launch-tri-grid {
   display: grid;
@@ -1785,7 +1606,7 @@ button {
   display: flex;
   gap: 16px;
   align-items: flex-start;
-  padding: 18px 20px;
+  padding: 20px 22px;
   background: var(--off-white);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-md);
@@ -2133,15 +1954,6 @@ button {
     height: 1px;
   }
 
-  .launch-card-header {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .launch-countdown-widget {
-    width: 100%;
-  }
-
   .launch-tri-grid {
     grid-template-columns: 1fr;
   }
@@ -2170,26 +1982,6 @@ button {
   .footer-brand-logo-img {
     height: 46px;
     max-width: 200px;
-  }
-
-
-  .launch-date-hero {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .countdown-timer-pills {
-    gap: 4px;
-  }
-
-  .timer-pill {
-    min-width: 50px;
-    padding: 8px 6px;
-  }
-
-  .btn-calendar-action {
-    width: 100%;
-    justify-content: center;
   }
 }
 
@@ -2655,6 +2447,34 @@ button {
   border: none;
   display: block;
   border-radius: inherit;
+}
+
+@media (max-width: 768px) {
+  .video-player-container {
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border-radius: 14px;
+    background: transparent;
+  }
+
+  .video-card-frame {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16 / 9;
+    background: transparent;
+  }
+
+  .showcase-video-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: none;
+    border-radius: inherit;
+  }
 }
 
 /* --------------------------------------------------------------------------
