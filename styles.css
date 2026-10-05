@@ -2413,101 +2413,56 @@ button {
 /* --------------------------------------------------------------------------
    SECTION 3: VIDEO EXPERIENCE PLAYER
    -------------------------------------------------------------------------- */
+/* Section fits one viewport: video is sized from remaining height, exact 16:9 (no letterbox bars) */
+.showcase-video {
+  min-height: calc(100vh - var(--header-height));
+}
+
 .video-player-container {
   position: relative;
-  width: 100%;
-  max-width: 100%;
+  width: min(100%, calc((100vh - var(--header-height) - 230px) * 16 / 9));
+  min-width: min(100%, 560px);
   margin: 0 auto;
-  height: clamp(480px, 72vh, 730px);
+  aspect-ratio: 16 / 9;
   background: #080F1E;
   border-radius: 22px;
   border: 1px solid rgba(0, 194, 222, 0.35);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7), 0 0 35px rgba(0, 194, 222, 0.2);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35), 0 0 35px rgba(0, 194, 222, 0.2);
   overflow: hidden;
 }
 
 .video-card-frame {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background: #080F1E;
-  display: block;
-  overflow: hidden;
-}
-
-/* Ambient Blurred Background Video Layer (Left & Right Dynamic Blue Glow) */
-.video-ambient-backdrop {
-  position: absolute;
-  inset: -20px;
-  width: calc(100% + 40px);
-  height: calc(100% + 40px);
-  overflow: hidden;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.ambient-video-iframe {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 140%;
-  height: 140%;
-  min-width: 100%;
-  min-height: 100%;
-  transform: translate(-50%, -50%) scale(1.25);
-  filter: blur(32px) brightness(0.7) saturate(1.8);
-  -webkit-filter: blur(32px) brightness(0.7) saturate(1.8);
-  opacity: 0.85;
-  border: none;
-  pointer-events: none;
-}
-
-.ambient-blue-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 50% 50%, rgba(0, 194, 222, 0.12) 0%, rgba(8, 15, 30, 0.3) 60%, rgba(8, 15, 30, 0.75) 100%),
-              linear-gradient(90deg, rgba(8, 15, 30, 0.55) 0%, rgba(0, 110, 185, 0.1) 25%, transparent 40%, transparent 60%, rgba(0, 110, 185, 0.1) 75%, rgba(8, 15, 30, 0.55) 100%);
-  pointer-events: none;
+  background: #080F1E;
+  overflow: hidden;
 }
 
-/* Main Foreground Interactive Video Frame (Crisp 16:9 Uncropped) */
+/* Frame matches the video's 16:9 exactly, so the blurred side backdrop is not needed */
+.video-ambient-backdrop {
+  display: none;
+}
+
 .showcase-video-iframe {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  inset: 0;
   width: 100%;
   height: 100%;
-  max-width: 100%;
-  max-height: 100%;
-  aspect-ratio: 16 / 9;
   border: none;
   display: block;
   z-index: 2;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
-  border-radius: 8px;
+  border-radius: inherit;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
+  .showcase-video {
+    min-height: auto;
+  }
+
   .video-player-container {
-    height: auto;
-    aspect-ratio: 16 / 9;
-    border-radius: 14px;
-  }
-
-  .video-ambient-backdrop {
-    display: none;
-  }
-
-  .showcase-video-iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    transform: none;
-    border-radius: inherit;
-    box-shadow: none;
+    min-width: 0;
+    border-radius: 14px;
   }
 }
 
