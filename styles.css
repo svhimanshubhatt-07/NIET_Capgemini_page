@@ -2161,10 +2161,10 @@ button {
 
 /* Individual Enlarged Card Frame (~2.5 visible on laptop) */
 .labs-card {
-  flex: 0 0 clamp(440px, 38vw, 580px);
-  width: clamp(440px, 38vw, 580px);
+  flex: 0 0 clamp(480px, 42vw, 660px);
+  width: clamp(480px, 42vw, 660px);
   min-width: 0;
-  height: clamp(350px, 52vh, 480px);
+  height: clamp(440px, 60vh, 580px);
   border-radius: 22px;
   overflow: hidden;
   position: relative;
@@ -2208,17 +2208,17 @@ button {
 
 @media (max-width: 1024px) {
   .labs-card {
-    flex: 0 0 clamp(340px, 55vw, 440px);
-    width: clamp(340px, 55vw, 440px);
-    height: clamp(290px, 42vh, 390px);
+    flex: 0 0 clamp(380px, 60vw, 500px);
+    width: clamp(380px, 60vw, 500px);
+    height: clamp(350px, 48vh, 460px);
   }
 }
 
 @media (max-width: 640px) {
   .labs-card {
-    flex: 0 0 84vw;
-    width: 84vw;
-    height: clamp(250px, 38vh, 340px);
+    flex: 0 0 86vw;
+    width: 86vw;
+    height: clamp(300px, 44vh, 390px);
   }
 }
 
