@@ -102,7 +102,7 @@
       <!-- Static Hero Status Bar (Fixed, No Slide) -->
       <div class="hero-status-strip" role="region" aria-label="Key Highlights">
         <div class="container hero-status-container">
-          
+
           <div class="hero-status-items">
             <div class="status-item highlight-launch">
               <span class="status-label">Launch:</span>
@@ -240,7 +240,8 @@
     <!-- ================================================================= -->
     <!-- NEW SECTION 1: Labs & Infrastructure (Centered Heading Top, Cover & Peek Slider Bottom) -->
     <!-- ================================================================= -->
-    <section id="labs-showcase" class="section showcase-section showcase-labs" aria-label="Labs and Infrastructure Showcase">
+    <section id="labs-showcase" class="section showcase-section showcase-labs"
+      aria-label="Labs and Infrastructure Showcase">
       <div class="showcase-glow-orb showcase-glow-orb-1" aria-hidden="true"></div>
       <div class="container relative-z">
 
@@ -251,40 +252,15 @@
           </h2>
         </div>
 
-        <!-- Modern Cover & Peek Slider Showcase -->
+        <!-- Modern Continuous Auto Slider (~2.5 Large Cards Visible) -->
         <div class="showcase-slider-wrapper">
-          <div class="cover-slider-container" id="labCoverSlider" data-interval="2000" role="region" aria-label="Interactive Labs Gallery">
+          <div class="labs-carousel-container" id="labsCarousel" role="region" aria-label="Interactive Labs Gallery">
             
-            <!-- Live Counter Badge -->
-            <div class="cover-counter-badge">
-              <span class="curr-num">01</span>
-              <span class="divider">/</span>
-              <span class="total-num">11</span>
-            </div>
-
-            <!-- Stage with Cover & Peek Slides -->
-            <div class="cover-slider-stage" id="labCoverStage">
-              <!-- Slides dynamically rendered with captions & tags -->
-            </div>
-
-            <!-- Floating Round Nav Buttons (48px) -->
-            <button class="cover-nav-arrow cover-arrow-prev" aria-label="Previous Slide">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <polyline points="15 18 9 12 15 6"></polyline>
-              </svg>
-            </button>
-            <button class="cover-nav-arrow cover-arrow-next" aria-label="Next Slide">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <polyline points="9 18 15 12 9 6"></polyline>
-              </svg>
-            </button>
-
-            <!-- Bottom Progress Bar & Pagination Dots -->
-            <div class="cover-bottom-bar">
-              <div class="cover-progress-track">
-                <div class="cover-progress-bar"></div>
+            <!-- Stage with Multi-Card Continuous Track -->
+            <div class="labs-slider-stage" id="labsStage">
+              <div class="labs-slider-track" id="labsTrack">
+                <!-- Dynamically rendered individual cards -->
               </div>
-              <div class="cover-pagination-dots" id="labCoverDots"></div>
             </div>
 
           </div>
@@ -296,7 +272,8 @@
     <!-- ================================================================= -->
     <!-- NEW SECTION 2: Glimpses & Events (Gallery 2: 3D Buttery Smooth rAF Carousel) -->
     <!-- ================================================================= -->
-    <section id="glimpses-showcase" class="g2 section showcase-section showcase-glimpses" aria-label="Campus Glimpses Showcase">
+    <section id="glimpses-showcase" class="g2 section showcase-section showcase-glimpses"
+      aria-label="Campus Glimpses Showcase">
       <div class="showcase-glow-orb showcase-glow-orb-2" aria-hidden="true"></div>
       <div class="container relative-z">
 
@@ -321,7 +298,8 @@
           <!-- Bottom Controls: Round Buttons & Progress Bar -->
           <div class="g2-controls">
             <button class="g2-btn g2-prev" aria-label="Previous slide">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <polyline points="15 18 9 12 15 6"></polyline>
               </svg>
             </button>
@@ -329,7 +307,8 @@
               <div class="g2-progress-bar"></div>
             </div>
             <button class="g2-btn g2-next" aria-label="Next slide">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <polyline points="9 18 15 12 9 6"></polyline>
               </svg>
             </button>
@@ -342,7 +321,8 @@
     <!-- ================================================================= -->
     <!-- NEW SECTION 3: Video Experience (Centered Heading Top, Modern Video Bottom) -->
     <!-- ================================================================= -->
-    <section id="video-showcase" class="section showcase-section showcase-video" aria-label="Video Walkthrough Experience">
+    <section id="video-showcase" class="section showcase-section showcase-video"
+      aria-label="Video Walkthrough Experience">
       <div class="showcase-glow-orb showcase-glow-orb-3" aria-hidden="true"></div>
       <div class="container relative-z">
 
@@ -352,7 +332,8 @@
             Experience The Centre <br><span class="gradient-text-animated">In Action</span>
           </h2>
           <p class="showcase-subheading">
-            Take an exclusive virtual walkthrough of the Capgemini CodeXperience Centre at NIET. Witness the advanced learning infrastructure engineered for tomorrow's technology leaders.
+            Take an exclusive virtual walkthrough of the Capgemini CodeXperience Centre at NIET. Witness the advanced
+            learning infrastructure engineered for tomorrow's technology leaders.
           </p>
         </div>
 
@@ -360,20 +341,15 @@
         <div class="showcase-video-wrapper">
           <div class="video-player-container">
             <div class="video-card-frame">
-              <video id="centreVideo" class="showcase-video-elem" playsinline preload="metadata" controls poster="assets/lab1.JPG">
-                <source src="assets/video.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-              <button class="custom-video-play-btn" id="customVideoPlayBtn" aria-label="Play or pause video">
-                <span class="play-btn-ripple" aria-hidden="true"></span>
-                <svg class="play-icon" width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
-                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                </svg>
-                <svg class="pause-icon" width="30" height="30" viewBox="0 0 24 24" fill="currentColor" style="display:none;">
-                  <rect x="6" y="4" width="4" height="16"></rect>
-                  <rect x="14" y="4" width="4" height="16"></rect>
-                </svg>
-              </button>
+              <iframe 
+                id="centreVideoFrame" 
+                class="showcase-video-iframe" 
+                src="https://www.youtube.com/embed/Fkote5iJar4?rel=0&modestbranding=1" 
+                title="Capgemini CodeXperience Centre at NIET" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+              </iframe>
             </div>
           </div>
         </div>
@@ -912,7 +888,7 @@
       const LAB_IMAGES = [
         { src: "assets/lab1.JPG", tag: "DEVELOPER PODS", title: "Enterprise Collaborative Workstations" },
         { src: "assets/lab2.JPG", tag: "HARDWARE LAB", title: "High-Performance Computing Infrastructure" },
-        { src: "assets/lab3.JPG", tag: "INNOVATION HUB", title: "Team Simulation & Agile Pods" },
+
         { src: "assets/lab4.JPG", tag: "EXPERIENTIAL SPACE", title: "Industry-Standard Coding Environments" },
         { src: "assets/lab5.JPG", tag: "TECH WORKBENCH", title: "Modern Multi-Monitor Engineering Stations" },
         { src: "assets/lab6.JPG", tag: "PROJECT ROOMS", title: "Collaborative Sprint & Architecture Pods" },
@@ -942,303 +918,21 @@
         { src: "assets/DSC01670.JPG", tag: "MILESTONE", title: "A Landmark Step in Industry-Academia Synergy" }
       ];
 
-      function initCoverSlider(containerId, imagesData, intervalMs = 2000) {
-        const container = document.getElementById(containerId);
-        if (!container) return;
+      function initLabsMarquee() {
+        const track = document.getElementById("labsTrack");
+        if (!track) return;
 
-        const effectiveInterval = parseInt(container.dataset.interval, 10) || intervalMs;
-        const stage = container.querySelector(".cover-slider-stage");
-        const dotsContainer = container.querySelector(".cover-pagination-dots");
-        const progressBar = container.querySelector(".cover-progress-bar");
-        const prevBtn = container.querySelector(".cover-arrow-prev");
-        const nextBtn = container.querySelector(".cover-arrow-next");
-        const currNumElem = container.querySelector(".curr-num");
-        const totalNumElem = container.querySelector(".total-num");
-
-        const total = imagesData.length;
-        if (total === 0 || !stage) return;
-
-        if (totalNumElem) {
-          totalNumElem.textContent = String(total).padStart(2, "0");
-        }
-
-        // Generate slides from array
-        stage.innerHTML = "";
-        const slides = imagesData.map((data, idx) => {
-          const slide = document.createElement("div");
-          slide.className = "cover-slide";
-          slide.dataset.index = idx;
-          slide.innerHTML = `
-            <img src="${data.src}" alt="${data.title || 'Slide Image ' + (idx + 1)}" loading="eager" decoding="async">
-          `;
-
-          // Clicking peek strip on the left triggers Previous
-          slide.addEventListener("click", () => {
-            if (slide.classList.contains("prev") && !isLocked) {
-              prevSlide();
-            }
-          });
-
-          stage.appendChild(slide);
-          return slide;
-        });
-
-        // Generate pagination dots
-        if (dotsContainer) {
-          dotsContainer.innerHTML = "";
-          for (let i = 0; i < total; i++) {
-            const dot = document.createElement("button");
-            dot.className = "cover-dot" + (i === 0 ? " active" : "");
-            dot.setAttribute("aria-label", "Go to slide " + (i + 1));
-            dot.addEventListener("click", () => {
-              if (isLocked || i === currentIndex) return;
-              goToSlide(i, i > currentIndex ? "next" : "prev");
-            });
-            dotsContainer.appendChild(dot);
-          }
-        }
-
-        let currentIndex = 0;
-        let isLocked = false;
-        let autoplayTimer = null;
-        let isHovered = false;
-        let isFocused = false;
-        const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-        function updateSlideClasses() {
-          slides.forEach((slide, i) => {
-            slide.classList.remove("incoming", "under", "no-trans");
-            const d = (i - currentIndex + total) % total;
-            slide.classList.remove("active", "prev", "hid", "next");
-            if (d === 0) {
-              slide.classList.add("active");
-            } else if (d === total - 1) {
-              slide.classList.add("prev");
-            } else if (d === total - 2) {
-              slide.classList.add("hid");
-            } else {
-              slide.classList.add("next");
-            }
-          });
-
-          if (dotsContainer) {
-            const dots = dotsContainer.querySelectorAll(".cover-dot");
-            dots.forEach((dot, idx) => {
-              dot.classList.toggle("active", idx === currentIndex);
-            });
-          }
-
-          if (currNumElem) {
-            currNumElem.textContent = String(currentIndex + 1).padStart(2, "0");
-          }
-        }
-
-        function triggerProgressBar() {
-          if (progressBar) {
-            progressBar.classList.remove("animating");
-            void progressBar.offsetWidth;
-            if (!isHovered && !isFocused && !prefersReducedMotion) {
-              progressBar.classList.add("animating");
-            }
-          }
-        }
-
-        function nextSlide() {
-          if (isLocked) return;
-          isLocked = true;
-          stopTimer();
-
-          currentIndex = (currentIndex + 1) % total;
-          updateSlideClasses();
-          triggerProgressBar();
-
-          setTimeout(() => {
-            isLocked = false;
-            startTimer();
-          }, 850);
-        }
-
-        function prevSlide() {
-          if (isLocked) return;
-          isLocked = true;
-          stopTimer();
-
-          const oldIndex = currentIndex;
-          const prevIndex = (currentIndex - 1 + total) % total;
-
-          const incomingSlide = slides[prevIndex];
-          const outgoingSlide = slides[oldIndex];
-
-          // Incoming previous slide slides in on top covering the outgoing slide
-          incomingSlide.classList.add("incoming");
-          outgoingSlide.classList.add("under");
-
-          currentIndex = prevIndex;
-
-          incomingSlide.classList.remove("prev", "hid", "next");
-          incomingSlide.classList.add("active");
-
-          if (dotsContainer) {
-            const dots = dotsContainer.querySelectorAll(".cover-dot");
-            dots.forEach((dot, idx) => {
-              dot.classList.toggle("active", idx === currentIndex);
-            });
-          }
-          if (currNumElem) {
-            currNumElem.textContent = String(currentIndex + 1).padStart(2, "0");
-          }
-          triggerProgressBar();
-
-          setTimeout(() => {
-            outgoingSlide.classList.add("no-trans");
-            updateSlideClasses();
-            void outgoingSlide.offsetWidth;
-            outgoingSlide.classList.remove("no-trans");
-            isLocked = false;
-            startTimer();
-          }, 900);
-        }
-
-        function goToSlide(targetIndex, direction = "next") {
-          if (isLocked || targetIndex === currentIndex) return;
-          if (direction === "prev") {
-            currentIndex = (targetIndex + 1) % total;
-            prevSlide();
-          } else {
-            currentIndex = (targetIndex - 1 + total) % total;
-            nextSlide();
-          }
-        }
-
-        function startTimer() {
-          stopTimer();
-          if (prefersReducedMotion || isHovered || isFocused || document.hidden) return;
-          triggerProgressBar();
-          autoplayTimer = setTimeout(() => {
-            if (!isHovered && !isFocused && !prefersReducedMotion && !document.hidden) {
-              nextSlide();
-            }
-          }, effectiveInterval);
-        }
-
-        function stopTimer() {
-          if (autoplayTimer) {
-            clearTimeout(autoplayTimer);
-            autoplayTimer = null;
-          }
-          if (progressBar) {
-            progressBar.classList.remove("animating");
-          }
-        }
-
-        if (prevBtn) {
-          prevBtn.addEventListener("click", () => {
-            if (!isLocked) prevSlide();
-          });
-        }
-
-        if (nextBtn) {
-          nextBtn.addEventListener("click", () => {
-            if (!isLocked) nextSlide();
-          });
-        }
-
-        container.addEventListener("mouseenter", () => {
-          isHovered = true;
-          stopTimer();
-        });
-
-        container.addEventListener("mouseleave", () => {
-          isHovered = false;
-          startTimer();
-        });
-
-        container.addEventListener("focusin", () => {
-          isFocused = true;
-          stopTimer();
-        });
-
-        container.addEventListener("focusout", () => {
-          isFocused = false;
-          startTimer();
-        });
-
-        document.addEventListener("visibilitychange", () => {
-          if (document.hidden) {
-            stopTimer();
-          } else {
-            startTimer();
-          }
-        });
-
-        // Mouse Drag Handling
-        let isMouseDown = false;
-        let mouseStartX = 0;
-
-        stage.addEventListener("mousedown", (e) => {
-          isMouseDown = true;
-          mouseStartX = e.clientX;
-          stage.style.cursor = "grabbing";
-        });
-
-        window.addEventListener("mouseup", (e) => {
-          if (isMouseDown) {
-            isMouseDown = false;
-            stage.style.cursor = "";
-            const diffX = mouseStartX - e.clientX;
-            if (Math.abs(diffX) > 50 && !isLocked) {
-              if (diffX > 0) {
-                nextSlide();
-              } else {
-                prevSlide();
-              }
-            }
-          }
-        });
-
-        // Touch Swipe Handling
-        let touchStartX = 0;
-        let touchEndX = 0;
-
-        stage.addEventListener("touchstart", (e) => {
-          if (e.changedTouches && e.changedTouches.length > 0) {
-            touchStartX = e.changedTouches[0].screenX;
-          }
-        }, { passive: true });
-
-        stage.addEventListener("touchend", (e) => {
-          if (e.changedTouches && e.changedTouches.length > 0) {
-            touchEndX = e.changedTouches[0].screenX;
-            const diffX = touchStartX - touchEndX;
-            if (Math.abs(diffX) > 50 && !isLocked) {
-              if (diffX > 0) {
-                nextSlide();
-              } else {
-                prevSlide();
-              }
-            }
-          }
-        }, { passive: true });
-
-        // Keyboard Navigation (Left / Right Arrow Keys)
-        container.setAttribute("tabindex", "0");
-        container.addEventListener("keydown", (e) => {
-          if (e.key === "ArrowLeft") {
-            e.preventDefault();
-            if (!isLocked) prevSlide();
-          } else if (e.key === "ArrowRight") {
-            e.preventDefault();
-            if (!isLocked) nextSlide();
-          }
-        });
-
-        // Initial setup
-        updateSlideClasses();
-        startTimer();
+        // Render 2 duplicate sets for continuous CSS infinite marquee
+        const doubleList = [...LAB_IMAGES, ...LAB_IMAGES];
+        track.innerHTML = doubleList.map((item, idx) => `
+          <div class="labs-card" data-idx="${idx % LAB_IMAGES.length}">
+            <div class="labs-card-img-wrap">
+              <img src="${item.src}" alt="${item.title}" class="labs-card-img" loading="lazy" decoding="async">
+            </div>
+          </div>
+        `).join("");
       }
-
-      // Initialize Cover & Peek Slider for Section 1 (Inside Our Labs)
-      initCoverSlider("labCoverSlider", LAB_IMAGES, 2000);
+      initLabsMarquee();
 
       // =========================================================================
       // GALLERY 2: 3D BUTTERY SMOOTH rAF CAROUSEL ENGINE (SCOPED IIFE)
@@ -1354,8 +1048,11 @@
           }
 
           const stageWidth = stage.offsetWidth || 1000;
-          const slideWidth = Math.min(stageWidth * 0.62, 760);
-          const STEP = slideWidth * 0.74;
+          const stageHeight = stage.offsetHeight || 500;
+          const slideHeight = stageHeight * 0.90;
+          const idealWidth = slideHeight * 1.46;
+          const slideWidth = Math.min(idealWidth, stageWidth * 0.78, 800);
+          const STEP = slideWidth * 0.72;
 
           slides.forEach((slide, i) => {
             let d = ((i - pos) % n + n) % n;
@@ -1380,10 +1077,10 @@
             slide.style.zIndex = Math.round(100 - a * 10);
             slide.style.opacity = Math.min(Math.max(1.9 - a * 0.55, 0), 1);
 
-            // Parallax inside slide
+            // Keep image clean and fully framed
             const im = slide.querySelector(".g2-im");
             if (im) {
-              im.style.transform = `translate3d(${-d * 9}%, 0, 0)`;
+              im.style.transform = "none";
             }
 
             // Dim overlay
@@ -1486,7 +1183,7 @@
           stage.classList.remove("g2-grabbing");
           try {
             stage.releasePointerCapture(e.pointerId);
-          } catch (err) {}
+          } catch (err) { }
 
           target = Math.round(target - velocity * 1.1);
           resetAutoplay();
