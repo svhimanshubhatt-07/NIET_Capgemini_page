@@ -73,9 +73,9 @@
       <nav class="primary-nav" aria-label="Main Navigation">
         <ul class="nav-list">
           <li class="nav-item"><a href="#overview" class="nav-link"><span>Overview</span></a></li>
-          <li class="nav-item"><a href="#experience" class="nav-link"><span>Experience</span></a></li>
+          <li class="nav-item"><a href="#glimpses-showcase" class="nav-link"><span>Gallery</span></a></li>
           <li class="nav-item"><a href="#collaboration" class="nav-link"><span>Collaboration</span></a></li>
-          <li class="nav-item"><a href="#launch" class="nav-link"><span>Launch Date</span></a></li>
+          <li class="nav-item"><a href="#experience" class="nav-link"><span>Experience</span></a></li>
         </ul>
 
       </nav>
@@ -341,8 +341,18 @@
         <div class="showcase-video-wrapper">
           <div class="video-player-container">
             <div class="video-card-frame">
+              <!-- Ambient Blurred Background Video Layer (Left & Right Glow) -->
+              <div class="video-ambient-backdrop" aria-hidden="true">
+                <iframe class="ambient-video-iframe"
+                  src="https://www.youtube.com/embed/Fkote5iJar4?autoplay=1&mute=1&loop=1&playlist=Fkote5iJar4&controls=0&showinfo=0&rel=0&disablekb=1&playsinline=1"
+                  tabindex="-1" frameborder="0" aria-hidden="true">
+                </iframe>
+                <div class="ambient-blue-overlay"></div>
+              </div>
+
+              <!-- Main Foreground Video Frame -->
               <iframe id="centreVideoFrame" class="showcase-video-iframe"
-                src="https://www.youtube.com/embed/Fkote5iJar4?rel=0&modestbranding=1"
+                src="https://www.youtube.com/embed/Fkote5iJar4?autoplay=1&mute=1&loop=1&playlist=Fkote5iJar4&rel=0&controls=1&playsinline=1"
                 title="Capgemini CodeXperience Centre at NIET" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen>
@@ -1159,58 +1169,6 @@
         }, { passive: false });
 
       })();
-
-      // 3. Custom Video Player Controller
-      const video = document.getElementById("centreVideo");
-      const playBtn = document.getElementById("customVideoPlayBtn");
-
-      if (video && playBtn) {
-        const playIcon = playBtn.querySelector(".play-icon");
-        const pauseIcon = playBtn.querySelector(".pause-icon");
-
-        function updatePlayState() {
-          if (video.paused || video.ended) {
-            if (playIcon) playIcon.style.display = "block";
-            if (pauseIcon) pauseIcon.style.display = "none";
-            playBtn.style.opacity = "1";
-            playBtn.style.pointerEvents = "auto";
-          } else {
-            if (playIcon) playIcon.style.display = "none";
-            if (pauseIcon) pauseIcon.style.display = "block";
-            playBtn.style.opacity = "0";
-            playBtn.style.pointerEvents = "none";
-          }
-        }
-
-        playBtn.addEventListener("click", () => {
-          if (video.paused) {
-            video.play();
-          } else {
-            video.pause();
-          }
-        });
-
-        video.addEventListener("play", updatePlayState);
-        video.addEventListener("pause", updatePlayState);
-        video.addEventListener("ended", updatePlayState);
-
-        // Hover container shows button even while playing
-        const videoFrame = video.closest(".video-card-frame");
-        if (videoFrame) {
-          videoFrame.addEventListener("mouseenter", () => {
-            if (!video.paused) {
-              playBtn.style.opacity = "0.7";
-              playBtn.style.pointerEvents = "auto";
-            }
-          });
-          videoFrame.addEventListener("mouseleave", () => {
-            if (!video.paused) {
-              playBtn.style.opacity = "0";
-              playBtn.style.pointerEvents = "none";
-            }
-          });
-        }
-      }
     })();
   </script>
 
